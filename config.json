@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "updated": "2026-08-24",
+  "service": {
+    "bibleStudy": "9:00 am",
+    "worship": "10:30 am"
+  },
+  "contact": {
+    "phone": "(936) 273-1919",
+    "email": "office@gslcthewoodlands.org",
+    "address": "9191 Cochran's Crossing Drive",
+    "cityStateZip": "The Woodlands, TX 77381"
+  },
+  "links": {
+    "site": "https://www.gslcthewoodlands.org",
+    "giving": "https://secure.myvanco.com/L-Z3XT/home",
+    "maps": "https://maps.app.goo.gl/sceGxbfDRRDHUiU26",
+    "facebook": "https://www.facebook.com/GSLCTheWoodlands/",
+    "preschool": "https://gslc-kids.org",
+    "weeklySignup": "https://us19.campaign-archive.com/home/?u=84ed91cf16872906ee09b4977&id=9523225463"
+  },
+  "feeds": {
+    "sermons": "https://www.gslcthewoodlands.org/sermons?format=json",
+    "weekly": "https://us19.campaign-archive.com/feed?u=84ed91cf16872906ee09b4977&id=9523225463"
+  }
+}
