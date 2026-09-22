@@ -63,6 +63,7 @@ The file holds the standing details once, then one entry per class:
 |---|---|
 | `time` | Leave **empty** unless the class meets at a different hour from `service.bibleStudy` in `config.json`. Empty means the app uses that one, so the time is only ever written down once. |
 | `location`, `intro` | Optional. Each is simply left out of the screen when empty. |
+| `updated` | Optional, `YYYY-MM-DD`. The date you last changed the lessons. The app shows "Lessons updated 19 September" under the class details when this is set. Leave it out and the app simply says nothing rather than guessing. Worth setting each time you edit, because this tab is the one place members cannot tell from the content alone whether they are looking at the current week. |
 | `date` | `YYYY-MM-DD`, the Sunday the class meets. Required. |
 | `topic` | Required. Everything else is optional. |
 | `reading`, `summary`, `notes` | The lesson itself. A class with none of these still shows on the schedule as a date and a topic — it just isn't tappable. |
