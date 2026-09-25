@@ -1,23 +1,41 @@
 {
   "schema": 1,
-  "title": "Sunday Bible Study",
-  "time": "",
+  "title": "Bible Study",
+  "time": "9:00 am",
+  "when": "Sundays 9:00 am \u00b7 Wednesdays 10:00 am",
   "location": "",
-  "intro": "",
+  "intro": "Sherri DeGeorge teaches the younger children in a preschool classroom. Nathan Dunmire teaches the older children in the meeting room. Pastor teaches adult Bible Study in the Fellowship Hall. Grab some coffee, a breakfast treat, and join us!",
+  "image": "https://mcusercontent.com/84ed91cf16872906ee09b4977/images/73147cbc-ee6c-b7f3-34c7-58c8eaca13aa.jpg",
   "updated": "2026-09-25",
+  "series": [
+    {
+      "title": "Set Apart: Living for God in a Busy World",
+      "when": "Sundays, 9:00 am",
+      "location": "Fellowship Hall",
+      "description": "In a world that never stops moving, finding the space to focus on God can feel like an uphill battle. How can you break free from the chaos of modern life and realign your heart with Scripture? Through this study, you will discover how to guard your time, resist worldly distractions, and live with intentional, holy purpose right where God has placed you. Together, we will learn practical biblical strategies to slow down, deepen our study and prayer lives, and confidently embrace our calling to be distinct, refreshed, and wholly dedicated to Christ."
+    },
+    {
+      "title": "Jude: Stand Firm and Contend for the Faith",
+      "when": "Wednesdays, 10:00 am",
+      "location": "",
+      "description": "Join us for a new Bible study on the book of Jude as we explore how to stand firm in the truth amidst a culture of shifting values. Written as an urgent call to \u201ccontend for the faith,\u201d this powerful single-chapter epistle offers timeless warnings against false teaching and points us to the Savior who keeps us blameless in His grace."
+    }
+  ],
   "classes": [
     {
       "date": "2026-09-27",
       "topic": "Avoid Spiritual Garbage",
       "reading": "2 Peter 2:1-2; Matthew 24",
-      "summary": "Just because something is food doesn’t mean it is good for you. Likewise, just because someone is teaching about God or Jesus or the Commandments or forgiveness doesn’t mean that teaching is beneficial. The Bible itself tells us there is such a thing as heresy, and it teaches us what we should do about it.",
+      "series": "Set Apart",
+      "summary": "Just because something is food doesn\u2019t mean it is good for you. Likewise, just because someone is teaching about God or Jesus or the Commandments or forgiveness doesn\u2019t mean that teaching is beneficial. The Bible itself tells us there is such a thing as heresy, and it teaches us what we should do about it.",
       "notes": []
     },
     {
       "date": "2026-09-30",
       "topic": "Jude: Contend for the faith",
       "reading": "Jude 1-6",
-      "summary": "Jude urges God’s people to contend for the Christian faith and warns against immorality and false teachers.",
+      "series": "Jude",
+      "summary": "Jude urges God\u2019s people to contend for the Christian faith and warns against immorality and false teachers.",
       "notes": []
     }
   ]
