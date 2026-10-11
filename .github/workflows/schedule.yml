@@ -1,0 +1,56 @@
+name: Sync the Bible study schedule
+
+# The church publishes its week in the Friday email, and the app reads its
+# dates from bible-study.json. Keeping the two in step by hand is what left
+# the Bible Study tab saying "No class is on the schedule at the moment" for
+# ten days while the congregation had a class every Sunday.
+#
+# This copies across only what the email actually states — which days meet,
+# which are cancelled, and which series each belongs to. The topic, reading
+# and summary are Pastor's and are never written here; the gslc-app monitor
+# keeps asking for those until they appear.
+
+on:
+  schedule:
+    # Daily on an odd minute. The email lands on a Friday, but not always at
+    # the same hour, and a run that finds nothing new prints "schedule already
+    # current" and exits without a commit — so daily costs nothing and means a
+    # late send is picked up the next morning rather than the next week.
+    - cron: '23 15 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: study-schedule
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # No pip install: the script uses only the standard library, so there is
+      # nothing to pin, cache, or have break on a Friday morning.
+      - name: Read the newsletter and update the dates
+        run: python sync_schedule.py
+
+      - name: Commit if the schedule moved
+        run: |
+          git config user.name  "gslc-config-bot"
+          git config user.email "actions@github.com"
+          git add bible-study.json
+          # Nothing new is the normal case six days in seven.
+          if git diff --staged --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -q -m "Bible study schedule $(date -u +%Y-%m-%d)"
+          git push -q
+          echo "pushed"
